@@ -647,12 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
         usernameButton.addEventListener("click", (event) => {
           const text = event.target.textContent;
 
-          navigator.clipboard.writeText(text);
+          copy(text);
         });
         passwordButton.addEventListener("click", (event) => {
           const text = event.target.textContent;
 
-          navigator.clipboard.writeText(text);
+          copy(text);
         });
 
         await updateCredentials();
@@ -739,6 +739,20 @@ Ensure the default browser behavior of the `hidden` attribute.
           binary += String.fromCharCode(bytes[i]);
         }
         return window.btoa(binary);
+      }
+
+      /**
+       * Based on https://stackoverflow.com/a/45071444
+       */
+      function copy(text) {
+        const inputElement = document.createElement("input");
+        inputElement.style.display = "hidden";
+        document.body.appendChild(inputElement);
+        inputElement.value = text;
+
+        inputElement.select();
+        document.execCommand("copy", false);
+        inputElement.remove();
       }
     </script>
   </body>
