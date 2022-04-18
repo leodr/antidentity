@@ -647,16 +647,12 @@ Ensure the default browser behavior of the `hidden` attribute.
         usernameButton.addEventListener("click", (event) => {
           const text = event.target.textContent;
 
-          const clipboard = new Clipboard();
-
-          clipboard.writeText(text);
+          navigator.clipboard.writeText(text);
         });
         passwordButton.addEventListener("click", (event) => {
           const text = event.target.textContent;
 
-          const clipboard = new Clipboard();
-
-          clipboard.writeText(text);
+          navigator.clipboard.writeText(text);
         });
 
         await updateCredentials();
