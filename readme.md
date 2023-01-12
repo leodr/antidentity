@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://leodr.github.io/antidentity/">
-    <img src="logo.png" height="200" />
+    <img src="./readme-assets/logo.png" height="200" />
   </a>
 </div>
 
