@@ -8,7 +8,7 @@
 
 <p align="center">
   <b>
-    Stateless account manager that works only with a keyphrase. 
+    Stateless credentials manager that works only with a keyphrase.
   </b>
 </p>
 
